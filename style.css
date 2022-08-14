@@ -1,0 +1,176 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: #ff6f6f;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-family: 'DynaPuff', cursive;
+}
+
+h1,h4 {
+    color: #6d1101;
+    text-shadow: 0 1px 2px black;
+}
+#box {
+    cursor: none;
+    position: relative;
+    width: 550px;
+    height: 300px;
+    background-color: #f76d6d;
+    box-shadow: inset 0 0 15px -5px black;
+    border-radius: 10px;
+}
+
+#stand {
+    position: absolute;
+    top: 61px;
+    left: 10px;
+    width: 50px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #6d1101;
+    box-shadow: 0 0 8px -1px black;
+}
+
+.ball {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 0 1px 2px black, inset 0 0 20px -1px #0c0000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.ball i {
+    color: #C21010;
+    font-size: 25px;
+}
+
+.top {
+    top: 10px;
+    left: 10px;
+
+}
+
+.bottom {
+    right: 10px;
+    bottom: 10px;
+    box-shadow: 0 0 1px 2px #c346e9, inset 0 0 20px -1px #c346e9;
+}
+
+#box:hover .ball {
+    animation: fade 15s linear 6s;
+
+}
+
+#box:hover .top {
+    animation: move 15s linear, fade 20s linear 6s;
+}
+
+
+@keyframes move {
+    0% {
+        transform: translate(0, 0);
+    }
+
+
+    5% {
+        transform: translate(50px, 0) rotate(180deg);
+    }
+
+
+    7% {
+        transform: translate(45px, 240px) scaleX(1);
+    }
+
+
+    8% {
+        transform: translate(45px, 240px) scale(1.6, 0.8);
+    }
+
+    10% {
+        transform: translate(100px, 50px) scale(0.8, 1.6);
+    }
+
+    12% {
+        transform: translate(155px, 240px);
+    }
+
+    13% {
+        transform: translate(155px, 240px) scale(1.4, 0.9);
+    }
+
+    15% {
+        transform: translate(210px, 100px) scale(0.9, 1.4);
+    }
+
+    17% {
+        transform: translate(265px, 240px);
+    }
+
+    18% {
+        transform: translate(265px, 240px) scale(1.3, 1);
+    }
+
+    20% {
+        transform: translate(300px, 150px) scale(1, 1.3);
+    }
+
+    22% {
+        transform: translate(320px, 230px);
+    }
+
+    40% {
+        transform: translate(480px, 230px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(480px, 230px);
+
+    }
+
+
+
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+
+    5% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+#box:hover .top i {
+    animation: pulse 0.7s linear infinite;
+}
+
+#box:hover .bottom i {
+    animation: pulse 0.7s linear infinite 3.5s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+}
