@@ -21,6 +21,7 @@ h4 {
 
 /* box thingy */
 #box {
+    cursor: none;
     position: relative;
     width: 550px;
     height: 300px;
@@ -73,11 +74,11 @@ h4 {
 }
 /* runs the animations */
 #box:hover .ball {
-    animation: fade 15s linear 6s;
+    animation: fade 20s linear 8s;
 
 }
 #box:hover .top {
-    animation: move 20s linear, fade 20s linear 6s;
+    animation: move 20s linear, fade 20s linear 8s;
 }
 
 /* the move animation */
