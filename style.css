@@ -1,5 +1,7 @@
 /* font */
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+
+/* general */
 body {
     margin: 0;
     height: 100vh;
@@ -11,12 +13,14 @@ body {
     font-family: 'DynaPuff', cursive;
 }
 
-h1,h4 {
+h1,
+h4 {
     color: #6d1101;
     text-shadow: 0 1px 2px black;
 }
+
+/* box thingy */
 #box {
-    cursor: none;
     position: relative;
     width: 550px;
     height: 300px;
@@ -25,6 +29,7 @@ h1,h4 {
     border-radius: 10px;
 }
 
+/* stand */
 #stand {
     position: absolute;
     top: 61px;
@@ -36,6 +41,7 @@ h1,h4 {
     box-shadow: 0 0 8px -1px black;
 }
 
+/* the two ball styles */
 .ball {
     position: absolute;
     width: 50px;
@@ -48,16 +54,9 @@ h1,h4 {
 
 }
 
-
-.ball i {
-    color: #C21010;
-    font-size: 25px;
-}
-
 .top {
     top: 10px;
     left: 10px;
-
 }
 
 .bottom {
@@ -66,31 +65,34 @@ h1,h4 {
     box-shadow: 0 0 1px 2px #c346e9, inset 0 0 20px -1px #c346e9;
 }
 
+/* heart shape */
+
+.ball i {
+    color: #C21010;
+    font-size: 25px;
+}
+/* runs the animations */
 #box:hover .ball {
     animation: fade 15s linear 6s;
 
 }
-
 #box:hover .top {
-    animation: move 15s linear, fade 20s linear 6s;
+    animation: move 20s linear, fade 20s linear 6s;
 }
 
-
+/* the move animation */
 @keyframes move {
     0% {
         transform: translate(0, 0);
     }
 
-
     5% {
         transform: translate(50px, 0) rotate(180deg);
     }
 
-
     7% {
         transform: translate(45px, 240px) scaleX(1);
     }
-
 
     8% {
         transform: translate(45px, 240px) scale(1.6, 0.8);
@@ -141,7 +143,7 @@ h1,h4 {
 
 
 }
-
+/* fade animation */
 @keyframes fade {
     0% {
         opacity: 1;
@@ -163,7 +165,7 @@ h1,h4 {
 #box:hover .bottom i {
     animation: pulse 0.7s linear infinite 3.5s;
 }
-
+/* pulse animation for hearts*/
 @keyframes pulse {
     0% {
         transform: scale(1);
