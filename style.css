@@ -243,12 +243,12 @@ h4 {
         }
 
         40% {
-            transform: translate(330px, 230px);
+            transform: translate(330px, 230px) rotate(360deg);
 
         }
 
         100% {
-            transform: translate(330px, 230px);
+            transform: translate(330px, 230px) rotate(360deg);
 
         }
     }
@@ -293,12 +293,12 @@ h4 {
         }
 
         25% {
-            transform: translate(230px, 230px) ;
+            transform: translate(230px, 230px)rotate(360deg);
 
         }
 
         100% {
-            transform: translate(230px, 230px);
+            transform: translate(230px, 230px) rotate(360deg);
 
         }
     }
