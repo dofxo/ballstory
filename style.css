@@ -136,16 +136,16 @@ h4 {
     }
 
     22% {
-        transform: translate(320px, 230px);
+        transform: translate(320px, 230px) ;
     }
 
     40% {
-        transform: translate(480px, 230px);
+        transform: translate(480px, 230px) rotate(360deg);
         opacity: 1;
     }
 
     100% {
-        transform: translate(480px, 230px);
+        transform: translate(480px, 230px) rotate(360deg);
 
     }
 
