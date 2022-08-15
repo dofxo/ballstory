@@ -89,69 +89,6 @@ h4 {
     animation: move 20s linear, fade 20s linear 8s;
 }
 
-/* the move animation */
-@keyframes move {
-    0% {
-        transform: translate(0, 0);
-    }
-
-    5% {
-        transform: translate(50px, 0) rotate(180deg);
-    }
-
-    7% {
-        transform: translate(45px, 240px) scaleX(1);
-    }
-
-    8% {
-        transform: translate(45px, 240px) scale(1.6, 0.8);
-    }
-
-    10% {
-        transform: translate(100px, 50px) scale(0.8, 1.6);
-    }
-
-    12% {
-        transform: translate(155px, 240px);
-    }
-
-    13% {
-        transform: translate(155px, 240px) scale(1.4, 0.9);
-    }
-
-    15% {
-        transform: translate(210px, 100px) scale(0.9, 1.4);
-    }
-
-    17% {
-        transform: translate(265px, 240px);
-    }
-
-    18% {
-        transform: translate(265px, 240px) scale(1.3, 1);
-    }
-
-    20% {
-        transform: translate(300px, 150px) scale(1, 1.3);
-    }
-
-    22% {
-        transform: translate(320px, 230px) ;
-    }
-
-    40% {
-        transform: translate(480px, 230px) rotate(360deg);
-        opacity: 1;
-    }
-
-    100% {
-        transform: translate(480px, 230px) rotate(360deg);
-
-    }
-
-
-
-}
 
 /* fade animation */
 @keyframes fade {
