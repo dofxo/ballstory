@@ -1,5 +1,8 @@
 /* font */
-@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+@font-face {
+    font-family: dynaPuff;
+    src: url(font/DynaPuff-Regular.ttf);
+}
 
 /* general */
 body {
@@ -10,7 +13,7 @@ body {
     align-items: center;
     flex-direction: column;
     justify-content: flex-start;
-    font-family: 'DynaPuff', cursive;
+    font-family: dynaPuff;
 }
 
 h1,
@@ -72,11 +75,13 @@ h4 {
     color: #C21010;
     font-size: 25px;
 }
+
 /* runs the animations */
 #box:hover .ball {
     animation: fade 20s linear 8s;
 
 }
+
 #box:hover .top {
     animation: move 20s linear, fade 20s linear 8s;
 }
@@ -144,6 +149,7 @@ h4 {
 
 
 }
+
 /* fade animation */
 @keyframes fade {
     0% {
@@ -159,6 +165,7 @@ h4 {
     }
 }
 
+/* starting the fade animation on balls */
 #box:hover .top i {
     animation: pulse 0.7s linear infinite;
 }
@@ -166,6 +173,7 @@ h4 {
 #box:hover .bottom i {
     animation: pulse 0.7s linear infinite 3.5s;
 }
+
 /* pulse animation for hearts*/
 @keyframes pulse {
     0% {
@@ -176,4 +184,119 @@ h4 {
         transform: scale(1.1);
     }
 
+}
+
+/* media queries */
+
+
+@media screen and (max-width:585px) {
+    #box {
+        width: 400px;
+    }
+
+    @keyframes move {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        5% {
+            transform: translate(50px, 0) rotate(180deg);
+        }
+
+        7% {
+            transform: translate(45px, 240px) scaleX(1);
+        }
+
+        8% {
+            transform: translate(45px, 240px) scale(1.6, 0.8);
+        }
+
+        10% {
+            transform: translate(100px, 50px) scale(0.8, 1.6);
+        }
+
+        12% {
+            transform: translate(155px, 240px);
+        }
+
+        13% {
+            transform: translate(155px, 240px) scale(1.4, 0.9);
+        }
+
+        15% {
+            transform: translate(210px, 100px) scale(0.9, 1.4);
+        }
+
+        17% {
+            transform: translate(245px, 240px);
+        }
+
+        18% {
+            transform: translate(245px, 240px) scale(1.3, 1);
+        }
+
+        20% {
+            transform: translate(245px, 230px) scale(1);
+        }
+
+        40% {
+            transform: translate(330px, 230px);
+
+        }
+
+        100% {
+            transform: translate(330px, 230px);
+
+        }
+    }
+}
+
+
+@media screen and (max-width:420px) {
+    #box {
+        width: 300px;
+    }
+    #box:hover .ball {
+        animation: fade 20s linear 5s;
+    
+    }
+    
+    #box:hover .top {
+        animation: move 20s linear, fade 20s linear 5s;
+    }
+    @keyframes move {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        5% {
+            transform: translate(50px, 0) rotate(180deg);
+        }
+
+        7% {
+            transform: translate(45px, 240px) scaleX(1);
+        }
+
+        8% {
+            transform: translate(45px, 240px) scale(1.6, 0.8);
+        }
+
+        10% {
+            transform: translate(100px, 50px) scale(0.8, 1.6);
+        }
+
+        12% {
+            transform: translate(155px, 230px);
+        }
+
+        25% {
+            transform: translate(230px, 230px) ;
+
+        }
+
+        100% {
+            transform: translate(230px, 230px);
+
+        }
+    }
 }
