@@ -95,11 +95,11 @@ h4 {
     }
 
     5% {
-        transform: translate(50px, 0) rotate(180deg);
+        transform: translate(47px, 0) rotate(180deg);
     }
 
     7% {
-        transform: translate(45px, 240px) scaleX(1);
+        transform: translate(47px, 240px) scaleX(1);
     }
 
     8% {
